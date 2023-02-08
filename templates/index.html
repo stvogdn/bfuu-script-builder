@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>    
+	  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Script Builder for BFUU">
+    <meta name="author" content="Steve Ogden">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- Custom styles for this template -->
+    <link href="../static/script_builder.css" rel="stylesheet">
+    <title>BFUU Script Builder</title>
+</head>
+<body>
+	    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BFUU Script Builder</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>BFUU Script Builder</h1>
+        <p class="lead">Fill the fields below with information about an upcomming service.<br> 
+          A script for the service will be built and placed in the 
+          <a href="https://drive.google.com/drive/folders/1ebEEZ4T4kjnP8qvU6qYFqFZwItzLOBmq?usp=share_link">WSC Folder</a> 
+          on Google Drive.</p>
+      </div>
+			<div class="form">
+				<form method="POST" action="{{url_for('index')}}">
+          <div class="mb-3">
+            <label for="date_of_service" class="form-label">Date Of Service:</label>
+            <input type="date" class="form-control" id="date_of_service" name="date_of_service">
+          </div>
+          <div class="mb-3">
+            <label for="service_title" class="form-label">Service Title:</label>
+            <input type="text" class="form-control" id="service_title" name="service_title">
+          </div>
+          <div class="mb-3">
+            <label for="speaker_name" class="form-label">Speaker Name:</label>
+            <input type="text" class="form-control" id="speaker_name" name="speaker_name">
+          </div>
+          <div class="mb-3">
+            <label for="liturgist_name" class="form-label">Liturgist Name:</label>
+            <input type="text" class="form-control" id="liturgist_name" name="liturgist_name">
+          </div>
+          <div class="mb-3">
+            <label>Coordinator Name</label>
+            <input type="text" class="form-control" name="coordinator_name">
+          </div>
+          <div class="mb-3">
+            <label>Zoom Host Name</label>
+            <input type="text" class="form-control" name="zoom_host_name">
+          </div>
+          <div class="mb-3">
+            <label>Metta Singer</label>
+            <input type="text" class="form-control" name="metta_singer">
+          </div>
+          <div class="mb-3">
+            <label>Slide Manager Name</label>
+            <input type="text" class="form-control" name="slide_manager_name">
+          </div>
+          <div class="mb-3">
+            <label>Readers Names</label>
+            <input type="text" class="form-control" name="readers_names">
+          </div>
+          <div class="mb-3">
+            <label>Singers Names</label>
+            <input type="text" class="form-control" name="singers_names">
+          </div>
+          <div class="mb-3">
+            <label>Circle Round Singer</label>
+            <input type="text" class="form-control" name="circle_round_singer">
+          </div>
+          <div class="mb-3">
+            <label>Prelude Hymn Number</label>
+            <input type="number" class="form-control" name="prelude_hymn_number">
+          </div>
+          <div class="mb-3">
+            <label>Prelude Hymn Name</label>
+            <input type="text" class="form-control" name="prelude_hymn_name">
+          </div>
+          <div class="mb-3">
+            <label>First Hymn Number</label>
+            <input type="number" class="form-control" name="first_hymn_number">
+          </div>
+          <div class="mb-3">
+            <label>First Hymn Name</label>
+            <input type="text" class="form-control" name="first_hymn_name">
+          </div>
+          <div class="mb-3">
+            <label>Second Hymn Number</label>
+            <input type="number" class="form-control" name="second_hymn_number">
+          </div>
+          <div class="mb-3">
+            <label>Second Hymn Name</label>
+            <input type="text" class="form-control" name="second_hymn_name">
+          </div>
+          <div class="mb-3">
+            <label>Final Hymn Number</label>
+            <input type="number" class="form-control" name="final_hymn_number">
+          </div>
+          <div class="mb-3">
+            <label>Final Hymn Name</label>
+            <input type="text" class="form-control" name="final_hymn_name">
+          </div>
+          <div class="mb-3">
+            <label>Principle Or Source Number</label>
+            <input type="text" class="form-control" name="principle_or_source_number">
+          </div>
+          <div class="mb-3">
+            <label>Principle Or Source</label>
+            <input type="text" class="form-control" name="principle_or_source">
+          </div>
+          <div class="mb-3">
+            <label>Principle Or Source Text</label>
+            <textarea class="form-control" name="principle_or_source_text"></textarea>
+          </div>
+          <div class="mb-3">
+            <label>Opening Words</label>
+            <input type="text" class="form-control" name="opening_words">
+          </div>
+          <div class="mb-3">
+            <label>Meditation Reading</label>
+            <input type="text" class="form-control" name="meditation_reading">
+          </div>
+          <div class="mb-3">
+            <label>Shared Plate Partner</label>
+            <input type="text" class="form-control" name="shared_plate_partner">
+          </div>
+          <div class="mb-3">
+            <label>Shared Plate Partner Text</label>
+            <textarea class="form-control" name="shared_plate_partner_text"></textarea>
+          </div>
+          <div class="mb-3 p-5">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+			</div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
+	
+        
+        
