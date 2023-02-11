@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 from dataclasses import dataclass
 from typing import List
 
+def get_hymn_name(hymn_number):
+    return "hymn name"
+
 @dataclass
 class script_data:
     date_of_service: str
@@ -49,13 +52,13 @@ def index():
             singers_names = request.form['singers_names'],
             circle_round_singer = request.form['circle_round_singer'],
             prelude_hymn_number = request.form['prelude_hymn_number'],
-            prelude_hymn_name = request.form['prelude_hymn_name'],
+            prelude_hymn_name = get_hymn_name(request.form['prelude_hymn_number']),
             first_hymn_number = request.form['first_hymn_number'],
-            first_hymn_name = request.form['first_hymn_name'],
+            first_hymn_name = get_hymn_name(request.form['first_hymn_number']),
             second_hymn_number = request.form['second_hymn_number'],
-            second_hymn_name = request.form['second_hymn_name'],
+            second_hymn_name = get_hymn_name(request.form['second_hymn_number']),
             final_hymn_number = request.form['final_hymn_number'],
-            final_hymn_name = request.form['final_hymn_name'],
+            final_hymn_name = get_hymn_name(request.form['final_hymn_number']),
             principle_or_source_number = request.form['principle_or_source_number'],
             principle_or_source = request.form['principle_or_source'],
             principle_or_source_text = request.form['principle_or_source_text'],
