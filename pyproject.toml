@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "script-builder"
+version = "0.1.0"
+description = "Automate BFUU Sunday script preparation"
+authors = ["Stephen Ogden <steve.ogden@netscout.com>"]
+readme = "README.md"
+packages = [{include = "script_builder"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.2.3"
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
